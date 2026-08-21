@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code, .font-mono {
+    font-family: 'IBM Plex Mono', Menlo, Monaco, Consolas, monospace;
+}
+
+.font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222 22% 12%;
+        --card: 210 20% 98%;
+        --card-foreground: 222 22% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 22% 12%;
+        --primary: 175 84% 30%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 210 20% 94%;
+        --secondary-foreground: 222 22% 12%;
+        --muted: 210 20% 94%;
+        --muted-foreground: 215 16% 40%;
+        --accent: 204 88% 92%;
+        --accent-foreground: 204 88% 26%;
+        --destructive: 0 72% 52%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 18% 88%;
+        --input: 214 18% 88%;
+        --ring: 175 84% 30%;
+        --success: 152 62% 38%;
+        --warning: 38 92% 50%;
+        --info: 204 88% 56%;
+        --chart-1: 175 84% 36%;
+        --chart-2: 204 88% 56%;
+        --chart-3: 152 62% 38%;
+        --chart-4: 38 92% 50%;
+        --chart-5: 0 72% 52%;
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 222 22% 8%;
+        --foreground: 210 20% 96%;
+        --card: 222 18% 11%;
+        --card-foreground: 210 20% 96%;
+        --popover: 222 16% 14%;
+        --popover-foreground: 210 20% 96%;
+        --primary: 175 84% 36%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 222 16% 14%;
+        --secondary-foreground: 210 20% 96%;
+        --muted: 222 16% 14%;
+        --muted-foreground: 215 14% 70%;
+        --accent: 222 16% 18%;
+        --accent-foreground: 204 88% 70%;
+        --destructive: 0 72% 52%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 222 14% 20%;
+        --input: 222 14% 20%;
+        --ring: 175 84% 36%;
+        --success: 152 62% 42%;
+        --warning: 38 92% 54%;
+        --info: 204 88% 56%;
+        --chart-1: 175 84% 42%;
+        --chart-2: 204 88% 60%;
+        --chart-3: 152 62% 45%;
+        --chart-4: 38 92% 55%;
+        --chart-5: 0 72% 56%;
+    }
+    .admin-scope {
+        --primary: 204 88% 46%;
+        --ring: 204 88% 46%;
+    }
+    .dark .admin-scope {
+        --primary: 204 88% 56%;
+        --ring: 204 88% 56%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* subtle scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* hero decorative gradients (login only) */
+.hero-mesh-dark {
+    background-image: radial-gradient(900px circle at 20% 10%, rgba(45, 212, 191, 0.18), transparent 55%),
+        radial-gradient(700px circle at 80% 20%, rgba(56, 189, 248, 0.14), transparent 55%);
+}
+.hero-mesh-light {
+    background-image: radial-gradient(900px circle at 20% 10%, rgba(45, 212, 191, 0.14), transparent 55%),
+        radial-gradient(700px circle at 80% 20%, rgba(56, 189, 248, 0.12), transparent 55%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

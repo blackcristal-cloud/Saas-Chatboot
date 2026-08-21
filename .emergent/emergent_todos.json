@@ -1,0 +1,34 @@
+[
+  {
+    "content": "Phase 1: Port license.js + seed.js to Python, minimal API routes",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 1: Run POC test script and verify license/seed logic (18/18 passed)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Get design guidelines from design_agent",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Backend - full API (companies, licenses, channels, bot-config, dashboard, admin login)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: Frontend - client panel (login, dashboard, treinamento, canais, banner) + admin panel",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: i18n PT-BR/EN + dark/light theme toggles",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: End to End Testing using Testing Agent (31/31 passed)",
+    "status": "completed"
+  },
+  {
+    "content": "Phase 2: All user stories covered in Development and testing",
+    "status": "completed"
+  }
+]
